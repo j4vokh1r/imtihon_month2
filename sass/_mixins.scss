@@ -1,0 +1,22 @@
+@mixin bg ($background-size, $background-position) {
+   background-repeat: no-repeat;
+   background-size: $background-size;
+   background-position: $background-position; 
+}
+
+@mixin button () {
+   border: none;
+   background-color: transparent;
+   outline: 0; 
+}
+@mixin flex () {
+   display: flex;
+   justify-content: space-between;
+   align-items: center; 
+}
+
+@mixin input {
+   border: none;
+   outline: 0;
+   border-bottom:  1px solid #d1d1d1;
+}

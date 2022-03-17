@@ -1,0 +1,284 @@
+.header{
+    .for-mobile{
+        position: relative;
+    }
+    .mobile_menu{
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: $white;
+        max-width: 240px;
+        &__item{
+            display: flex;
+            flex-direction: column;
+            gap: 23px;
+            padding: 28px 31px 28px 20px;
+        }
+
+        .header_list a{
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 135%;
+            text-transform: capitalize;
+        }
+        .close_button{
+            top: 20px;
+            right: 20px;
+            position: absolute;
+            @include button
+        }
+    }
+    &_items{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 52px 0 50px 0;
+
+    }
+    &_list a{
+        font-size: 13px;
+        line-height: 150%;
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+    }
+    // &_list{
+    //     display: none;
+    // }
+    &_logo{
+        width: 216px;
+        height: 66px;
+    }
+    &_tel{
+        display: none;
+    }
+    &_tell_number a{
+        font-family: 'Open Sans';   
+        font-size: 13px;
+        line-height: 150%;
+        align-items: center;
+        text-transform: uppercase; 
+    }
+    &_option{
+        width: 35px;
+        font-size: 13px;
+        line-height: 150%;
+        color: rgba(52, 52, 52, 0.7);
+        border: none;
+        appearance: none;
+        cursor: pointer;
+        outline: 0;
+        background-image: url(./../images/down.png);
+        @include bg (12px 8px , right)
+    }
+    .hamburger_botton{
+        display: none;
+        border: none;
+        background-color: transparent;
+    }
+}
+.header_bottom{
+    &_item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 60px;
+    }
+    &_list{
+        padding-top: 120px;
+        padding-bottom: 40px;
+        max-width: 175px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &:nth-child(1){
+            background-image: url(./../images/divan.png);
+            @include bg ( contain ,top center)
+        }
+        &:nth-child(2){
+            background-image: url(./../images/stul.png);
+            @include bg ( contain ,top center)
+        }
+        &:nth-child(3){
+            background-image: url(./../images/kreslo.png);
+            @include bg ( contain ,top center)
+        }
+        &:nth-child(4){
+            background-image: url(./../images/kravat.png);
+            @include bg ( contain ,top center)
+        }
+        &:nth-child(5){
+            background-image: url(./../images/matras.png);
+            @include bg ( contain ,top right 30px)
+        }
+        &:nth-child(6){
+            background-image: url(./../images/pufi.png);
+            @include bg ( contain ,top center)
+        }
+        &:nth-child(7){
+            background-image: url(./../images/mebel.png);
+            display: flex;
+            align-items: center;
+            @include bg ( contain ,top right 30px)
+        }
+        &_link{
+            font-size: 13px;
+            line-height: 150%;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+    }
+
+}
+
+.header_navs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &_select{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 110%;
+        border: none;
+        appearance: none;
+        cursor: pointer;
+        outline: 0;
+        background-image: url(./../images/down.png);
+        @include bg (12px 8px , right)
+    }
+    &_search{
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+    }
+    &_search input{
+        border: none;
+        outline: 0;
+    }
+    .search{
+        margin-left: 43px;
+        border: 1px solid #343434;
+        padding: 7px 12px;
+    }
+    &_button{
+        &:first-child{
+            margin-right: 20px;
+        }
+        @include button
+    }
+    &_buttons{
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+    }
+    &_search{
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+    }
+
+}
+.wrapper{
+    display: none;
+}
+
+.hamburger_button{
+    display: none;
+}
+
+
+@media only screen and (max-width: 376px){
+    .header{
+        &_items{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 0 31px 0;
+        }
+        .hamburger_button{
+            display: block;
+            @include button
+        }
+
+        .mobile_menu--on{
+            display: block;
+            z-index: 1000;
+        }
+
+        &_list{
+            display: none;
+        }
+        &_logo img{
+            width: 111px;
+            height: 34px;
+        }
+        &_logo {
+            width: 111px;
+            height: 34px;
+        }
+        &_tel{
+            display: block;
+            width: 21px;
+            height: 21px;
+        }
+        &_tell_number a{
+            display: none;
+        }
+        .options{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .hamburger_botton{
+            display: inline-block;
+            border: none;
+            background-color: transparent;
+            width: 25px;
+            height: 23px;
+        }
+        .hamburger_botton img{
+            width: 25px;
+            height: 23px;
+        }
+    }
+    .header_bottom_item{
+        display: none;
+    }
+    .header_navs{
+        display: none;
+    }
+    .mobile_navs{
+        
+        margin-bottom: 30px;
+        @include flex
+    }
+    .wrapper{
+        max-width: 300px;
+    }
+    .layer_btn{
+        @include button
+    }
+    .search {
+        float: right;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #343434;
+        padding: 6px 12px;
+        width: 265px;
+    }
+    .search input{
+        border: none;
+        outline: 0
+    }
+    .wrapper{
+        display: block;
+        
+
+    }
+}

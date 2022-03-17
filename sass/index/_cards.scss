@@ -1,0 +1,145 @@
+.cards{
+    margin-top: 68px;
+
+    &_item{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        width: 100%;
+        @include flex
+        
+    }
+    &_list{
+        background-color: $cardbg;
+        display: flex;
+        align-items: center;
+        padding: 0 11px 0 1px;
+        max-width: 570px;
+        min-height: 278px;
+    }
+    &_link{
+        @include flex
+    }
+
+    .card_wrapper{
+        min-width: 259px;
+        margin-left: 20px;
+        
+    }
+    &_link_img{
+        mix-blend-mode: darken;
+    }
+    &_link_title{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+    &_link_subtitle{
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 127.5%;
+        letter-spacing: 0.1em;
+    }
+
+    .for_img{
+        margin-left: 23px;
+    }
+}
+
+.cards_buttons{
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 60px;
+    .card_button{
+        @include button
+        font-size: 20px;
+        line-height: 110%;
+        display: flex;
+        align-items: center;
+        color: rgba(87, 83, 83, 0.5);
+    }
+    .active{
+        color: $black;
+    }
+}
+
+.card_link_button{
+    display: inline-block;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    max-width: 188px;
+    padding: 13px 15px;
+}
+
+
+@media only screen and(max-width: 376px){
+    .cards{
+        
+        &_item{
+            margin-top: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            width: 100%;
+            @include flex
+            
+        }
+        &_list{
+            max-width: 157px;
+            height: auto;
+            min-height: 0;
+            position: relative;
+            margin-bottom: 70px;
+        }
+        &_link{
+            @include flex;
+            // flex-direction: column;
+            width: 140px;
+            height: 165px;
+        }
+
+        &_link_img{
+            width: 150px;
+            height: auto;
+            mix-blend-mode: darken;
+            background-color: $cardbg;
+        }
+        &_link_img{
+            mix-blend-mode: darken;
+        }
+        &_link_title{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            text-transform: uppercase;
+            text-align: center;
+            width: 160px;
+            margin: 0;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -33px;
+            // transform: translate(45px, 26px);
+        }
+        &_link_subtitle{
+            display: none;
+        }
+
+        .card_wrapper{
+            margin: 0;
+        }
+    
+        .for_img{
+            margin-left: 23px;
+        }
+    }
+    .cards_buttons{
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+}

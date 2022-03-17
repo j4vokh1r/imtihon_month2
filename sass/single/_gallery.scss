@@ -1,0 +1,47 @@
+.gallery{
+    margin-bottom: 199px;
+    &__inner{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        // flex-wrap: nowrap;
+
+        &:not(:last-child){
+            padding-bottom: 10px;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 376px){
+
+    .huge__container{
+        padding: 0;
+    }
+
+    .gallery{
+        margin-bottom: 112px;
+        &__inner{
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+        }
+
+        &__image{
+            width: 375px;
+            height: 306px;
+
+            &:not(:last-child){
+                margin-bottom: 5px;
+            }
+        }
+
+        &__display{
+            display: none;
+        }
+    }
+
+}
+
+

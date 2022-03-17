@@ -1,0 +1,115 @@
+.download{
+    margin-bottom: 160px;
+    &__item{
+        max-width: 1170px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border:  1px solid $main-button;
+        padding: 0;
+        margin: 0;
+    }
+    
+    &__list{
+        width: 390px;
+        
+        &:not(:last-child){
+            border-right: 1px solid $main-button;
+        }
+    }
+    
+    &__link{
+        font-style: normal;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 35px;
+        color: $main-black;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 52px 49px 52px;
+        margin: 0 auto;
+        
+    }
+    
+    &__pdf{
+        display: flex;
+        &::after{
+            content: "";
+            width: 32px;
+            height: 33px;
+            display: block;
+            background-color: $main-button;
+            border-radius: 50%;
+            background-image: url(./../images/download.png);
+            background-position: center center;
+            background-size: auto;
+            background-repeat: no-repeat;
+            margin-left: 25px;
+        }
+    }
+    
+    &__catalog{
+        padding-right: 90px ;
+    }
+}
+
+@media only screen and (max-width: 376px){
+    
+    .download{
+        &__item{
+            max-width: 340px;
+            width: 100%;
+            flex-wrap: wrap;
+            border: none;
+            justify-content: center;
+        }
+        
+        &__list{
+            width: 167px;
+            &:not(:last-child){
+                border:none;
+            }
+        }
+
+        &__link{
+            font-size: 18px;
+            line-height: 21px;
+            padding:14px 0;
+            margin-left: 4px;
+        }
+        
+        &__pdf{
+
+            border: 1px solid $main-button;
+            &::after{
+                content: "";
+                width: 18px;
+                height: 18px;
+                display: block;
+                background-color: $orange;
+                background-image: url(./../images/download.png);
+                background-position: center center;
+                background-repeat: no-repeat;
+                margin-left: 0;
+            }
+        }
+        
+        &__catalog{
+            border-top: 1px solid $main-button;
+            border-right: 1px solid $main-button;
+            border-bottom: 1px solid $main-button;
+            
+        }
+    }
+    
+    .model{
+        display: inline-block;
+        margin: 0 auto;
+        text-align: center;
+        border-right: 1px solid $main-button;
+        border-bottom: 1px solid $main-button;
+        border-left: 1px solid $main-button;
+    }
+}

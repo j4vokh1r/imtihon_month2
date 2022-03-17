@@ -1,0 +1,137 @@
+.footer{
+    background-color: $footerbg; 
+    &_item{
+
+        position: relative;
+    }
+    &__headling{
+        font-weight: 800;
+        font-size: 130px;
+        line-height: 110%;
+        letter-spacing: 0.13em;
+        color: $footerbg;
+        position: absolute;
+        top: -204px;
+        right: 0;
+    }
+    
+    &_menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 80px 0;
+    }
+    &_firstmenu{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    &_secondmenu{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    &_wrapper{
+        max-width: 450px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &_contact{
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+    &_link{
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 150%;
+        letter-spacing: 0.16em;
+        text-transform: capitalize;
+        color: $white;
+    }
+    &_contact_socials{
+        display: flex;
+        gap: 14px;
+        margin-bottom: 32px;
+    }
+    &_contact_tell{
+        font-family: 'Open Sans';
+        font-size: 13px;
+        line-height: 150%;
+        align-items: center;
+        color: $white;
+    }
+
+    &_button{
+        max-width: 270px;
+        width: 100%;
+        background-color: $orange;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 150%;
+        text-transform: capitalize;
+        padding: 7px 15px;
+        @include button
+    }
+
+    &_button img{
+        margin-left: 22px;
+    }
+    .copyright{
+        text-align: center;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 150%;
+        letter-spacing: 0.16em;
+        text-transform: capitalize;
+        color: $white;
+        padding-bottom: 30px;
+    }
+
+}
+
+@media only screen and (max-width: 376px) {
+    .footer{
+        &_item{
+            position: relative;
+        }
+        &__headling{
+            font-size: 80px;
+            top: -125px;
+            right: -30px;
+        }
+        &_menu{
+            display: flex;
+            flex-direction: column;
+        }
+        &_logo{
+            order: 1;
+            transform: translateX(80px);
+        }
+        &_wrapper{
+            margin-bottom: 84px;
+        }
+        &_firstmenu{
+            max-width: 150px;
+        }
+        &_contact{
+            display: flex;
+            flex-direction: column;
+            flex-direction: column-reverse;
+        }
+        &_contact_socials{
+            margin-bottom: 0;
+        }
+        &_contact{
+            max-width: 270px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        .wrapper_socils{
+            margin-bottom: 55px;
+            @include flex
+        }
+    }
+}
