@@ -44,8 +44,6 @@
     .quetions_form{
         display: flex;
         flex-direction: column;
-        
-
     }
     .quetions_form input{
         @include input

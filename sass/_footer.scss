@@ -67,13 +67,15 @@
     &_button{
         max-width: 270px;
         width: 100%;
-        background-color: $orange;
         font-weight: 600;
         font-size: 13px;
         line-height: 150%;
         text-transform: capitalize;
         padding: 7px 15px;
-        @include button
+        background-color: $main-button;
+        border: none;
+        outline: 0;
+        cursor: pointer;
     }
 
     &_button img{

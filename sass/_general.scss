@@ -57,4 +57,14 @@ a{
   color: $white;
   background: $orange;
   text-align: center;
+  cursor: pointer;
+  transition: 0.4s all ease;
+  &:hover{
+    background-color: rgb(53, 250, 92);
+    transform: scale(1.1);
+  }
+  &:active{
+    background-color: $orange;
+    transform: scale(1);
+  }
 }

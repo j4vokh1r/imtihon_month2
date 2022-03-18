@@ -1,3 +1,16 @@
+.curtain{
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+}
+.curtain--on{
+    display: block;
+}
 .header{
     .for-mobile{
         position: relative;
@@ -29,6 +42,99 @@
             @include button
         }
     }
+    .mobile_quetion{
+        display: none;
+        position: absolute;
+        top: 250px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+
+        z-index: 1000;
+        max-width: 470px;
+        max-height: 417px;
+        &_form{
+            
+            max-width: 470px;
+            max-height: 417px;
+            background-color: $white;
+            padding: 31px 50px 17px 50px;
+            transform: translate(-65px, 33px);
+            position: relative;
+            &::before{
+                content: '';
+                position: absolute;
+                width: 118px;
+                height: 131px;
+                display: block;
+                background-image: url(./../images/o.png);
+                @include bg (contain, center)
+                top: -27px;
+                left: -75px;
+            }
+        }
+        .form{
+            &_variable{
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 16px;
+                color: $orange;
+                margin-bottom: 15px;
+            }
+            &_title{
+                font-weight: 700;
+                font-size: 28px;
+                line-height: 33px;
+                text-transform: uppercase;
+                color: $darkblack;
+                margin-bottom: 20px;
+            }
+        }
+        .quetions_form{
+            display: flex;
+            flex-direction: column;
+        }
+        .quetions_form input{
+            @include input
+            width: 371px;
+            padding-bottom: 5px;
+            margin-bottom: 25px;
+        }
+        .form_checkbox{
+            @include flex
+            margin-bottom: 20px;
+            .checkboxtext{
+                font-weight: 400;
+                font-size: 11px;
+                line-height: 13px;
+                
+            }
+        }
+        .form_checkbox input{
+            max-width: 20px;
+            margin-bottom: 0;
+            margin-right: 10px;
+        }
+        .form_button{
+            padding: 14px 20px;
+            text-align: center;
+            max-width: 209px;
+            font-size: 15px;
+            display: flex;
+            justify-content: center;
+            border: none;
+            outline: 0; 
+            margin: 0 auto;
+        }
+    }
+    .mobile_quetion--on{
+        display: block;
+    }
+
+    
+
+
     &_items{
         display: flex;
         justify-content: space-between;
